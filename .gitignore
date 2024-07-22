@@ -142,3 +142,11 @@ dist
 .svelte-kit
 
 # End of https://www.toptal.com/developers/gitignore/api/node
+
+stickers-input/*
+!stickers-input/
+!stickers-input/.gitkeep
+
+stickers-output/*
+!stickers-output/
+!stickers-output/.gitkeep
