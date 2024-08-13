@@ -1,4 +1,3 @@
-//@ts-check
 import webpconv from "@caed0/webp-conv";
 import sharp from "sharp";
 import csv from "csv-parser";
@@ -115,18 +114,22 @@ const getFileName = (input) => {
   return parts[0];
 };
 
-const input = "stickers-input/60b3fb4fc9ac5c3d7426bf25.webp";
+const input = "stickers-input/61d309bb5c6572b1f6a7719a.webp";
 
 const typeToConverter = await isWebAnimated(input);
 // console.log(typeToConverter)
-const name = getFileName('60af514e98efcb4f69c39af3.webp');
+const name = getFileName('61d309bb5c6572b1f6a7719a.webp');
 const output = `stickers-output/${name}${typeToConverter ? ".gif" : ".png"}`;
 console.log(name)
 
 
-try {
-  const converter = new webpconv();
-  converter.convert(input, output, { quality: 10, transparent: "0x000000" });
-} catch (error) {
-  console.log(error);
+const convertirdor = (input,output) => {
+  try {
+    const converter = new webpconv();
+    converter.convert(input, output, { quality: 10, transparent: "0x000000" });
+  } catch (error) {
+    console.log(error);
+  }
+  
 }
+convertirdor(input,output)
